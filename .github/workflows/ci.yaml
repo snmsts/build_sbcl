@@ -16,6 +16,7 @@ jobs:
       - name: Install Roswell
         env:
           LISP: ${{ matrix.lisp }}
+          ROSWELL_BRANCH: master
           ROSWELL_INSTALL_DIR: /usr
         run: |
           curl -L https://raw.githubusercontent.com/roswell/roswell/master/scripts/install-for-ci.sh | sh
