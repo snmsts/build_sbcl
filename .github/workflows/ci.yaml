@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: apt
-        run: which apt-get >/dev/null && sudo apt-get -yq update && sudo apt-get -yq install git build-essential automake autoconf libcurl4-openssl-dev
+        run: which apt-get >/dev/null && sudo apt-get -yq update && sudo apt-get -yq install build-essential libcurl4-gnutls-dev automake autoconf
       - name: Install Roswell
         env:
           LISP: ${{ matrix.lisp }}
