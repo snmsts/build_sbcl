@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: apt
-      run: which apt-get >/dev/null && sudo apt-get -yq update && sudo apt-get -yq install build-essential libcurl4-gnutls-dev automake autoconf
+      run: which apt-get >/dev/null && sudo apt-get -yq update && sudo apt-get -yq install build-essential libcurl4-gnutls-dev automake autoconf || true
     - name: Install Roswell
       env:
        LISP: ${{ matrix.lisp }}
