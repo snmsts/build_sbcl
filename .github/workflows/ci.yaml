@@ -17,7 +17,7 @@ jobs:
       run: which apt-get >/dev/null && sudo apt-get -yq update && sudo apt-get -yq install build-essential libcurl4-gnutls-dev automake autoconf || true
     - name: brew
       run: which brew >/dev/null && brew install automake autoconf || true
-      name: choco
+    - name: choco
       run: which choco >/dev/null && choco install msys2 || true
     - name: pacman
       run: which pacman >/dev/null && pacman --noconfirm -Suy autoconf automake || true
